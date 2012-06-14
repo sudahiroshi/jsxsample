@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Mouseでお絵かき</title>
+    <style>
+      body {
+        background-color: #7f7f7f;
+      }
+      #myCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+      }
+    </style>
+    <script src="pen.js"></script>
+    <script>
+      window.addEventListener("load", function(e) {
+		JSX.require("pen.jsx").Application.main$S( "myCanvas" );
+      });
+    </script>
+  </head>
+  <body>
+  <div>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+  </div>
+  </body>
+</html>
+
