@@ -15,12 +15,8 @@ function $__jsx_merge_interface(target, source) {
  */
 function $__jsx_lazy_init(obj, prop, func) {
 	function reset(obj, prop, value) {
-		Object.defineProperty(obj, prop, {
-			value: value, 
-			enumerable: true,
-			writable: true,
-			configurable: true
-		});
+		delete obj[prop];
+		obj[prop] = value;
 		return value;
 	}
 
@@ -96,8 +92,8 @@ Pen.prototype.start$ = function () {
 		var y;
 		if ($this.mouse_condition) {
 			es = (function (o) { return o instanceof MouseEvent ? o : null; })(e);
-			x = es.clientX;
-			y = es.clientY;
+			x = es.offsetX;
+			y = es.offsetY;
 			$this.context.beginPath();
 			$this.context.arc(x, y, 5, 0, Math.PI * 2.0, false);
 			$this.context.fill();
@@ -137,7 +133,7 @@ Application.main$S = function (canvasId) {
 	pen.start$();
 };
 
-Application$main$S = Application.main$S;
+var Application$main$S = Application.main$S;
 
 /**
  * class dom extends Object
@@ -163,7 +159,7 @@ dom.id$S = function (id) {
 	return (function (o) { return o instanceof HTMLElement ? o : null; })(dom.window.document.getElementById(id));
 };
 
-dom$id$S = dom.id$S;
+var dom$id$S = dom.id$S;
 
 /**
  * @param {!string} id
@@ -173,7 +169,7 @@ dom.getElementById$S = function (id) {
 	return (function (o) { return o instanceof HTMLElement ? o : null; })(dom.window.document.getElementById(id));
 };
 
-dom$getElementById$S = dom.getElementById$S;
+var dom$getElementById$S = dom.getElementById$S;
 
 /**
  * @param {!string} tag
@@ -183,7 +179,7 @@ dom.createElement$S = function (tag) {
 	return dom.window.document.createElement(tag);
 };
 
-dom$createElement$S = dom.createElement$S;
+var dom$createElement$S = dom.createElement$S;
 
 /**
  * class js extends Object
@@ -202,7 +198,7 @@ function js$() {
 js$.prototype = new js;
 
 $__jsx_lazy_init(dom, "window", function () {
-	return js.global["window"];
+	return js.global.window;
 });
 js.global = (function () { return this; })();
 

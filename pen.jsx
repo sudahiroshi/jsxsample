@@ -21,8 +21,8 @@ final class Pen {
 		var draw = function( e : Event ) : void {
 			if( this.mouse_condition ) {
 				var es = e as MouseEvent;
-				var x = es.clientX;
-				var y = es.clientY;
+				var x = es.offsetX;
+				var y = es.offsetY;
 				this.context.beginPath();
 				this.context.arc( x, y, 5, 0, Math.PI * 2.0, false );
 				this.context.fill();
