@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8">
+    <title>DFT</title>
+    <style>
+      body {
+        background-color: #afafaf;
+      }
+      .myCanvas {
+        background-color: #ffffff;
+      }
+      .box {
+        float: left;
+        margin: 5px;
+      }
+    </style>
+    <script src="dft_gui.js"></script>
+    <script>
+      window.addEventListener("load", function(e) {
+		JSX.require("dft_gui.jsx").Application.main$SSSSS( "myCanvas1", "myCanvas2", "sin", "sin2", "rectangle" );
+      });
+    </script>
+  </head>
+  <body>
+  <div>
+    <p>ボタンで元波形を選択してください<br>Please select an original wave by buttons</p>
+    <div>
+      <button type="button" id="sin">sin(x)</button>
+      <button type="button" id="sin2">sin(x+30)</button>
+      <button type="button" id="rectangle">rectanglar wave</button>
+    </div>
+    <div class="box">
+      <p>元波形<br>original wave</p>
+      <canvas class="myCanvas" id="myCanvas1" width="400" height="400"></canvas>
+    </div>
+    <div class="box">
+      <p>周波数成分（赤：実部，青：虚部）<br>Spectrum ( red: real part, blue: imaginary part )</p>
+      <canvas class="myCanvas" id="myCanvas2" width="400" height="400"></canvas>
+    </div>
+  </div>
+  </body>
+</html>
+
