@@ -2,7 +2,7 @@ import "js/web.jsx";
 import "dftlib.jsx";
 import "vcanvas.jsx";
 
-final class Application {
+final class dft_gui {
 	static function main( canvas1Id: string, canvas2Id: string, button1: string, button2: string, button3: string ) : void {
 		var elm1 = dom.id(canvas1Id) as HTMLCanvasElement;
 		var vc1 = new VCanvas( elm1 );
