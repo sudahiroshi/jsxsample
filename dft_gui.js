@@ -1,4 +1,4 @@
-var JSX = {};
+var JSX_dft_gui = {};
 (function () {
 
 /**
@@ -46,7 +46,7 @@ var $__jsx_ObjectHasOwnProperty = Object.prototype.hasOwnProperty;
 /*
  * public interface to JSX code
  */
-JSX.require = function (path) {
+JSX_dft_gui.require = function (path) {
 	var m = $__jsx_classMap[path];
 	return m !== undefined ? m : null;
 }
