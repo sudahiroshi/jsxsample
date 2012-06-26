@@ -51,20 +51,20 @@ JSX.require = function (path) {
 	return m !== undefined ? m : null;
 }
 /**
- * class Application extends Object
+ * class dft_gui extends Object
  * @constructor
  */
-function Application() {
+function dft_gui() {
 }
 
-Application.prototype = new Object;
+dft_gui.prototype = new Object;
 /**
  * @constructor
  */
-function Application$() {
+function dft_gui$() {
 };
 
-Application$.prototype = new Application;
+dft_gui$.prototype = new dft_gui;
 
 /**
  * @param {!string} canvas1Id
@@ -73,7 +73,7 @@ Application$.prototype = new Application;
  * @param {!string} button2
  * @param {!string} button3
  */
-Application.main$SSSSS = function (canvas1Id, canvas2Id, button1, button2, button3) {
+dft_gui.main$SSSSS = function (canvas1Id, canvas2Id, button1, button2, button3) {
 	/** @type {HTMLCanvasElement} */
 	var elm1;
 	/** @type {VCanvas} */
@@ -195,7 +195,7 @@ Application.main$SSSSS = function (canvas1Id, canvas2Id, button1, button2, butto
 	b3.addEventListener("click", rectangle);
 };
 
-var Application$main$SSSSS = Application.main$SSSSS;
+var dft_gui$main$SSSSS = dft_gui.main$SSSSS;
 
 /**
  * class FG extends Object
@@ -504,8 +504,8 @@ js.global = (function () { return this; })();
 
 var $__jsx_classMap = {
 	"dft_gui.jsx": {
-		Application: Application,
-		Application$: Application$,
+		dft_gui: dft_gui,
+		dft_gui$: dft_gui$,
 		FG: FG,
 		FG$: FG$
 	},
