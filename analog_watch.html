@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8">
+    <title>Analog Watch</title>
+    <style>
+      body {
+        background-color: #afafaf;
+      }
+      .myCanvas {
+        background-color: #ffffff;
+      }
+    </style>
+    <script src="analog_watch.jsx.js"></script>
+    <script>
+      window.addEventListener("load", function(e) {
+		JSX.require("analog_watch.jsx").analog_watch.main$S( "analog" );
+      });
+    </script>
+  </head>
+  <body>
+  <div>
+    <canvas class="myCanvas" id="analog" width="400" height="400"></canvas>
+  </div>
+  </body>
+</html>
+
