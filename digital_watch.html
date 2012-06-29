@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8">
+    <title>Digital Watch</title>
+    <script src="digital_watch.jsx.js"></script>
+    <script>
+      window.addEventListener("load", function(e) {
+		dw.require("digital_watch.jsx").Application.main$S( "watch" );
+      });
+    </script>
+  </head>
+  <body>
+  <div>
+    <p id="watch"></p>
+  </div>
+  </body>
+</html>
+
