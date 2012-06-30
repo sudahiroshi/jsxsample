@@ -86,16 +86,22 @@ Pen.prototype.start$ = function () {
 	draw = (function (e) {
 		/** @type {MouseEvent} */
 		var es;
+		/** @type {Element} */
+		var ee;
+		/** @type {ClientRect} */
+		var rect;
 		/** @type {!number} */
 		var x;
 		/** @type {!number} */
 		var y;
 		if ($this.mouse_condition) {
 			es = (function (o) { return o instanceof MouseEvent ? o : null; })(e);
-			x = es.offsetX;
-			y = es.offsetY;
+			ee = (function (o) { return o instanceof Element ? o : null; })(es.target);
+			rect = ee.getBoundingClientRect();
+			x = es.clientX - rect.left;
+			y = es.clientY - rect.top;
 			$this.context.beginPath();
-			$this.context.arc(x, y, 5, 0, Math.PI * 2.0, false);
+			$this.context.arc(x, y, 5, 0, 6.283185307179586, false);
 			$this.context.fill();
 		}
 	});
